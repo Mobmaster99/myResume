@@ -1,0 +1,128 @@
+{{!--
+Це код container файлу для summary сторінки,
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
+--}}
+
+<div>
+    <main>
+        <h1>{{name}} <span class="badge bg-danger">JS</span></h1>
+        <hr>
+        <div><span class="badge text-bg-info">{{description}}</span></div>
+        <div>
+            {{#with history}}
+            <span class="badge text-bg-secondary">{{year}}, {{founder}}</span>
+            {{/with}}
+        </div>
+        <br>
+        <div class="dropdown">
+            <button class="btn btn-info dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Types
+            </button>
+            <ul class="dropdown-menu">
+                {{#each types}}
+                <li><a class="dropdown-item" href="">{{this}}</a></li>
+                {{/each}}
+            </ul>
+        </div>
+        <br>
+        <h2>Syntax <span class="badge bg-warning">:</span></h2>
+        <ul>
+            {{#with syntax}}
+            <div>
+                <li>
+                    <h3><span class="badge text-bg-dark">variables:</span></h3>
+                </li>
+                {{#each variables}}
+                <span class="badge rounded-pill text-bg-warning">({{this}})</span>
+                {{/each}}
+            </div>
+            <br>
+            <div>
+                <li>
+                    <h3><span class="badge text-bg-dark">functions:</span></h3>
+                </li>
+                {{#each functions}}
+                <span class="badge rounded-pill text-bg-warning">({{this}})</span>
+                {{/each}}
+            </div>
+            <br>
+            <div>
+                <li>
+                    <h3><span class="badge text-bg-dark">conditionals:</span></h3>
+                </li>
+                {{#each conditionals}}
+                <span class="badge rounded-pill text-bg-warning">({{this}})</span>
+                {{/each}}
+            </div>
+            <br>
+            <div>
+                <li>
+                    <h3><span class="badge text-bg-dark">loops:</span></h3>
+                </li>
+                {{#each loops}}
+                <span class="badge rounded-pill text-bg-warning">({{this}})</span>
+                {{/each}}
+            </div>
+            <br>
+            <div>
+                <li>
+                    <h3><span class="badge text-bg-dark">classes:</span></h3>
+                </li>
+                {{#each classes}}
+                <span class="badge rounded-pill text-bg-warning">({{this}})</span>
+                {{/each}}
+            </div>
+            {{/with}}
+        </ul>
+        <br>
+        <h2><span class="badge rounded-pill text-bg-primary">features:</span></h2>
+        {{#with features}}
+        <ul class="list-group">
+            <li class="list-group-item list-group-item-primary">{{0}}</li>
+            <li class="list-group-item list-group-item-secondary">{{1}}</li>
+            <li class="list-group-item list-group-item-success">{{2}}</li>
+            <li class="list-group-item list-group-item-danger">{{3}}</li>
+            <li class="list-group-item list-group-item-warning">{{4}}</li>
+            <li class="list-group-item list-group-item-info">{{5}}</li>
+        </ul>
+        {{/with}}
+        <br>
+        <h2><span class="badge rounded-pill text-bg-warning">libraries:</span></h2>
+        {{#each libraries}}
+        <div class="btn-group" role="group" aria-label="Basic outlined example">
+            <button type="button" class="btn btn-outline-success">{{this}}</button>
+        </div>
+        {{/each}}
+        <br>
+        <br>
+        <div class="btn-group">
+            <button type="button" class="btn btn-danger">tools</button>
+            <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown">
+                <span class="visually-hidden">Toggle Dropdown</span>
+            </button>
+            <ul class="dropdown-menu">
+                {{#each tools}}
+                <li><a class="dropdown-item" href="">{{this}}</a></li>
+                {{/each}}
+            </ul> 
+        </div>
+        <br>
+        <br>
+        {{#each community}}
+        <ul class="list-group list-group">
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                    <div class="fw-bold">{{name}}</div>
+                    {{type}}
+                </div>
+            </li>
+        </ul>
+        {{/each}}
+
+    </main>
+</div>
+
+{{!--
+Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
+Адже наш layout/default.hbs має вже структуру HTML
+--}}
