@@ -1,6 +1,13 @@
-<nav>
-    {{> link text="Summary" href="/summary" line=true }}
-    {{> link text="Skills" href="/skills" line=true }}
-    {{> link text="Education" href="/education" line=true }}
-    {{> link text="Work" href="/work" line=true noLine=true }}
+<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item">{{> link text="Summary" href="/summary" }}</li>
+    <li class="breadcrumb-item">{{> link text="Skills" href="/skills" }}</li>
+    <li class="breadcrumb-item">{{> link text="Education" href="/education" }}</li>
+    <li class="breadcrumb-item">{{> link text="Work" href="/work" }}</li>
+    <li class="breadcrumb-item">{{> link text="Person" href="/person" }}</li>
+    <li class="breadcrumb-item">{{> link text="Bio" href="/bio" }}</li>
+    <li class="breadcrumb-item">{{> link text="Program" href="/program" }}</li>
+    <li class="breadcrumb-item">{{> link text="Web" href="/web" }}</li>
+    <li class="breadcrumb-item">{{> link text="js" href="/js" }}</li> 
+  </ol>
 </nav>
