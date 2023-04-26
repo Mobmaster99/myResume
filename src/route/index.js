@@ -770,7 +770,7 @@ router.get('/car', function (req, res) {
         seats: {
           material: 'leather',
           color: 'black',
-          heated: ,
+          heated: true,
           ventilated: true,
         },
         dashboard: {

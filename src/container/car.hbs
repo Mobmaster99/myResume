@@ -181,22 +181,30 @@
         <div class="col-md-4" class="right">
             {{#with engine}}
             <ul class="list-group">
-                <li class="list-group-item list-group-item-primary" aria-current="true"><h4>Engine:</h4></li>
+                <li class="list-group-item list-group-item-primary" aria-current="true">
+                    <h4>Engine:</h4>
+                </li>
                 <li class="list-group-item list-group-item-warning"><b>type:</b> {{type}}</li>
                 <li class="list-group-item list-group-item-warning"><b>displacement:</b> {{displacement}}</li>
                 <li class="list-group-item list-group-item-warning"><b>horsepower:</b> {{horsepower}}</li>
                 <li class="list-group-item list-group-item-warning"><b>torque:</b> {{torque}}</li>
                 <li class="list-group-item list-group-item-warning">
-                    <b>transmission:</b> <ul><li><b>type:</b> {{transmission.type}}</li><li><b>gears:</b> {{transmission.gears}}</li></ul>
+                    <b>transmission:</b>
+                    <ul>
+                        <li><b>type:</b> {{transmission.type}}</li>
+                        <li><b>gears:</b> {{transmission.gears}}</li>
+                    </ul>
                 </li>
             </ul>
             {{/with}}
         </div>
         <br>
-        <div class="col-md-4" >
+        <div class="col-md-4">
             {{#with fuel_economy}}
-            <ul class="list-group" >
-                <li class="list-group-item list-group-item-primary" aria-current="true"><h4>Fuel_economy:</h4></li>
+            <ul class="list-group">
+                <li class="list-group-item list-group-item-primary" aria-current="true">
+                    <h4>Fuel_economy:</h4>
+                </li>
                 <li class="list-group-item list-group-item-warning"><b>city:</b> {{city}} mpg</li>
                 <li class="list-group-item list-group-item-warning"><b>highway:</b> {{highway}} mpg</li>
                 <li class="list-group-item list-group-item-warning"><b>combined:</b> {{combined}} mpg</li>
@@ -206,11 +214,13 @@
         <br>
         <div class="col-md-4">
             {{#with price}}
-            <ul class="list-group" >
-                <li class="list-group-item list-group-item-primary" aria-current="true"><h4>Price:</h4></li>
+            <ul class="list-group">
+                <li class="list-group-item list-group-item-primary" aria-current="true">
+                    <h4>Price:</h4>
+                </li>
                 <li class="list-group-item list-group-item-warning"><b>base:</b> {{base}}</li>
                 <li class="list-group-item list-group-item-warning"><b>destination:</b> {{destination}}</li>
-                <li class="list-group-item list-group-item-warning"><b>options:</b> 
+                <li class="list-group-item list-group-item-warning"><b>options:</b>
                     <ul>
                         <li>{{options.navigation}}$</li>
                         <li>{{options.moonroof}}$</li>
