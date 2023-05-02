@@ -1,0 +1,13 @@
+<div class="row mt-3">
+    {{#each footer}}
+    <div class="col-2">
+        {{#each this}}
+        <div class="nav">
+            <div class="nav-item">
+                <a class="nav-link {{#unless link}}disabled{{/unless}}" href="{{link}}">{{text}}</a>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+    {{/each}}
+</div>
