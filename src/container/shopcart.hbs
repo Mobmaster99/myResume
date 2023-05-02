@@ -1,0 +1,88 @@
+<main class="p-3">
+    {{> nav_shop}}
+
+    <h1 class="mt-5 mb-3">{{header.title}}</h1>
+    <a href="{{header.button.link}}" class="btn btn-outline-secondary">
+        {{header.button.text}}
+    </a>
+    <hr class="mt-5 mb-5">
+    {{#each goodsBlock}}
+    <div class="card mb-4">
+        <div class="card-body row p-2"> 
+            <div class="col-2">
+                <img src="{{image}}">
+            </div>
+            <div class="col-4 ps-0">
+                <h3 class="card-title mt-2">{{name}}</h3>
+                <div class="mt-1">{{description}}</div>
+            </div>
+            <div class="col-2">
+                <div class="mt-4">{{price.title}}:</div>
+                <h3 class="mt-1">{{price.value}}</h3>
+            </div>
+            <div class="col-2">
+                <div class="mt-5">{{amount}}</div>
+            </div>
+            <div class="col-2">
+                {{#each buttons}}
+                <div>
+                    <div class="btn {{#if isPrimary}}btn-primary{{/if}} {{#if isDanger}}btn-outline-danger{{/if}} mt-2 mb-2">
+                        {{text}}
+                    </div>
+                </div>
+                {{/each}}
+            </div>  
+        </div>
+    </div>
+    {{/each}}
+    <hr class="mt-5 mb-5">
+    <h2>{{total.title}}</h2>
+    <h2>{{total.amount}}</h2>
+    <div class="pb-3">{{total.delivery}}</div>
+    {{#each total.buttons}}
+    <div class="mt-3">
+        <a href="{{link}}" class="btn {{#if isSuccess}}btn-success{{/if}} {{#if isOutline}}btn-outline-success{{/if}}">
+            {{text}}
+        </a>
+    </div>
+    {{/each}}
+    <hr class="mt-5 mb-5">
+    <h2 class="text-center mb-3">{{goodsOtherBlock.title}}</h2>
+    <div class="row">
+        {{#each goodsOtherBlock.cards}}
+        <div class="col-4 pe-1">
+            <div class="card">
+                <div>
+                    <img src="{{image}}" class="card-img-top">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title mb-2">
+                        {{title}} 
+                        {{#if isHot}}
+                        <span class="badge rounded-pill text-bg-warning ms-3">Hot!</span>
+                        {{/if}}
+                        {{#if idNew}}
+                        <span class="badge rounded-pill text-bg-primary ms-3">New!</span>
+                        {{/if}}
+                    </h5>
+                    <p class="card-text">{{description}}</p>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+    <hr class="mt-5 mb-5">
+    <div class="card text-bg-dark">
+        <div class="card-body pb-0">
+            <h2>{{subscribe.header}}</h2>
+            <p>{{subscribe.description}}</p>
+            {{#each subscribe.buttons}}
+            <div class="mb-3">
+                <a href="{{link}}" class="btn btn-primary">{{text}}</a>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+    <hr class="mt-5">
+    {{> footer_shop}}
+</main>
