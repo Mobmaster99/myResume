@@ -1,4 +1,4 @@
-<main class="p-3">
+<main>
     <h1>Hello world</h1>
     <h2 class="text-end">Hello world</h2>
     <h3>Hello world</h3>
@@ -9,99 +9,174 @@
     <hr>
     <span>додатковий текст</span>
     <hr>
-    <button class="btn btn-info">
-        <span class="text-danger">button</span>
-    </button>
-    <br>
-    <br>
-    <br>
-    <div class="row g-4">
-        <div class="col-12">
-            <div class="nav nav-tabs">
-                <div class="nav-item">
-                    <a href="#" class="nav-link active">Main</a>
-                </div>
-                <div class="nav-item">
-                    <a href="#" class="nav-link">Catalog</a>
-                </div>
-                <div class="nav-item">
-                    <a href="#" class="nav-link disabled">Shop list</a>
-                </div>
-            </div>
-        </div>
+    <a href="#" class="btn btn-primary">
+        button
+    </a>
+    <hr>
+    <p class="text-secondary">My text</p>
+    <p class="text-muted">My text</p>
 
-        <div class="col-4">
+    <hr>
+    <button class="btn btn-outline-primary btn-lg">My button</button>
+    <button class="btn btn-outline-success">My button</button>
+    <button class="btn btn-outline-danger btn-sm">My button</button>
+
+    <hr>
+
+    <div class="card">
+        <div class="card-body text-danger">
+            <button class="btn btn-outline-primary btn-lg">My button</button>
+            <button class="btn btn-outline-success">My button</button>
+            <button class="btn btn-outline-danger btn-sm">My button</button>
+        </div>
+    <div class="row gy-5">
+        <section class="col-12">
+            <h1>Hello world</h1>
+            <h2 class="text-end">Hello world</h2>
+            <h3>Hello world</h3>
+            <hr>
+            <div class="display-1 text-muted text-center">Hello world</div>
+            <div class="display-2 text-uppercase">Hello world</div>
+            <div class="display-3">Hello world</div>
+            <hr>
+            <span>додатковий текст</span>
+            <hr>
+            <button class="btn btn-info">
+                <span class="text-danger">button</span>
+            </button>
+        </section>
+
+        <section class="col-9">
             <div class="card">
-                <div class="pt-3 px-3">
-                    <div class="nav flex-column">
-                        <div class="nav-item mb-3">
-                            <div class="card">
-                                <a href="/summary" class="nav-link">link</a>
-                            </div>
-                        </div>
-                        <div class="nav-item mb-3">
-                            <div class="card">
-                                <a href="/skills" class="nav-link">link1</a>
-                            </div>
-                        </div>
-                        <div class="nav-item mb-3">
-                            <div class="card">
-                                <a href="#" class="nav-link disabled">link2</a>
-                            </div>
-                        </div>
-                    </div>
+                <img class="card-img-top" src="https://picsum.photos/2000/1000" alt="product photo">
+                <div class="card-body">
+                    <h5 class="card-title text-bg-danger">Product №765765</h5>
+                    <p class="text-bg-light">DVD player Sony</p>
+                    <a href="/summary" class="btn btn-primary">купити</a>
                 </div>
             </div>
-        </div>
-        <div class="col-8">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item">
-                    <a href="#">Home</a>
+        </section>
+        <section class="col-3">
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <ul class="list-group">
+                        <li class="list-group-item">item 1.1</li>
+                        <li class="list-group-item">item 1.2</li>
+                    </ul>
                 </li>
-                <li class="breadcrumb-item">
-                    <a href="#">PC та ноутбук</a>
-                </li>
-                <li class="breadcrumb-item">
-                    <a href="#">Масboock</a>
-                </li>
-            </ol>
-        </div>
-        <br>
-        <div class="col-12">
-            <div class="btn btn-primary m-3">Click</div>
-            <div class="alert alert-primary">
-                <h5 class="mb-2">Hello world <span class="badge text-bg-secondary rounded-pill">NEW</span></h5>
-                <p class="m-0">info!</p>
+                <li class="list-group-item">item 2</li>
+                <li class="list-group-item">item 3</li>
+            </ul>
+        </section>
+        <section class="col-6">
+            <div class="card text-bg-primary">
+                <div class="card-header">
+                    <div class="display-6">Menu</div>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item text-bg-warning">
+                        <a href="/" class="btn btn-link">Home page</a>
+                    </li>
+                    <li class="list-group-item text-bg-success">
+                        <a href="/summary" class="btn btn-link">Summary page</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="/work" class="btn btn-link">Work page</a>
+                    </li>
+                </ul>
+
+                <div class="card-footer">
+                    <button class="btn btn-dark btn-sm">Menu</button>
+                </div>
             </div>
-        </div>
-    </div>
+        </section>
+        <section class="col-6">
+            <table class="table table-bordered">
+                <thead class="text-bg-primary">
+                    <tr>
+                        <th>
+                            #id
+                        </th>
+                        <th>
+                            name
+                        </th>
+                        <th>
+                            age
+                        </th>
+                    </tr>
+                </thead>
 
-<<<<<<< HEAD
-    <h1><i class="bi bi-fuel-pump-diesel"></i></h1>
-
-    <i class="bi bi-lamp-fill"></i>
-
-    <h1><i class="fa-brands fa-figma fa-beat" style="color: #0dc955;"></i></h1>
-
-    <div>
-        <img src="/svg/computer.svg">
-=======
-    <div class="row g-5">
-        <div class="col-12">
-            <div>
-                <label class="form-label">Email address</label>
-                <div class="row">
-                    <div class="col-2">
-                        <input class="form-control" type="color">
-                    </div>
-                    <div class="col-2">
-                        <input class="form-control" type="color">
-                    </div>
-                    <div class="col-2">
-                        <input class="form-control" type="color">
+                <tbody>
+                    <tr>
+                        <th>1</th>
+                        <td>Fedya</td>
+                        <td>30</td>
+                    </tr>
+                    <tr>
+                        <th>2</th>
+                        <td>Ivan</td>
+                        <td>25</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section class="col-12">
+            <div class="row g-2">
+                <div class="col-4">
+                    <div class="card text-bg-success">
+                        <div class="card-header text-center">Header</div>
+                        <div class="card-body text-center text-bg-danger">
+                            <h6 class="card-title">This is title</h6>
+                            <p>This is our content</p>
+                            <button class="btn btn-secondary">Click!</button>
+                        </div>
+                        <div class="card-footer text-center">Footer</div>
                     </div>
                 </div>
-                <div class="form-text text-danger">Error! You need to set correct emeil</div>
+                <div class="col-4">
+                    <div class="card text-bg-success">
+                        <div class="card-header text-center">Header</div>
+                        <div class="card-body text-center text-bg-danger">
+                            <h6 class="card-title">This is title</h6>
+                            <p>This is our content</p>
+                            <button class="btn btn-secondary">Click!</button>
+                        </div>
+                        <div class="card-footer text-center">Footer</div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card text-bg-success">
+                        <div class="card-header text-center">Header</div>
+                        <div class="card-body text-center text-bg-danger">
+                            <h6 class="card-title">This is title</h6>
+                            <p>This is our content</p>
+                            <button class="btn btn-secondary">Click!</button>
+                        </div>
+                        <div class="card-footer text-center">Footer</div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card text-bg-success">
+                        <div class="card-header text-center">Header</div>
+                        <div class="card-body text-center text-bg-danger">
+                            <h6 class="card-title">This is title</h6>
+                            <p>This is our content</p>
+                            <button class="btn btn-secondary">Click!</button>
+                        </div>
+                        <div class="card-footer text-center">Footer</div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card text-bg-success">
+                        <div class="card-header text-center">Header</div>
+                        <div class="card-body text-center text-bg-danger">
+                            <h6 class="card-title">This is title</h6>
+                            <p>This is our content</p>
+                            <button class="btn btn-secondary">Click!</button>
+                        </div>
+                        <div class="card-footer text-center">Footer</div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="col-12">
@@ -153,6 +228,5 @@
             </div>
             
         </div>
->>>>>>> e1c5e3fd9e9c4d788d6eefba7f57915fb25e8664
     </div>
 </main>
