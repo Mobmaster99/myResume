@@ -1,0 +1,24 @@
+{{#if isPri}}
+<div class="card">
+    <div class="card-body">
+        <h6 class="mb-1">{{title}}</h6>
+        <div class="mb-2">{{value}}</div>
+        <a href="{{button.link}}" class="btn
+        {{#if button.isPrimary}}btn-primary{{/if}}
+        {{#if button.isSecondary}}btn-outline-secondary{{/if}}
+        {{#if button.isDanger}}btn-outline-danger{{/if}}">
+            {{button.text}}
+        </a>
+    </div>
+</div>
+{{else}}
+<div class="card">
+    <div class="card-body">
+        <h6 class="mb-1">{{title}}</h6>
+        <div class="mb-2">{{value}}</div>
+        <a href="{{button.link}}" class="btn btn-primary">
+            {{button.text}}
+        </a>
+    </div>
+</div>
+{{/if}}
