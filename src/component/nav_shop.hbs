@@ -5,5 +5,10 @@
             <a href="{{href}}" class="nav-link {{#unless href}}disabled{{/unless}}">{{text}}</a>
         </div>
         {{/each}}
+        {{#if disabl}}
+        <div class="nav-item">
+            <a href="{{href}}" class="nav-link disabled">Disabled</a>
+        </div>
+        {{/if}}
     </div>
 </div>
