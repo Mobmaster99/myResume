@@ -1,0 +1,101 @@
+<main>
+    {{> nav_shop disabl=true}}
+    <nav aria-label="breadcrumb" class="mt-5 mb-5">
+        <ol class="breadcrumb">
+            {{#each breadcrumb}}
+            {{#unless url}}
+            <li class="breadcrumb-item">
+                {{name}}
+            </li>
+            {{else}}
+            <li class="breadcrumb-item">
+                <a href="{{url}}">{{name}}</a>
+            </li>
+            {{/unless}}
+            {{/each}}
+        </ol>
+    </nav>
+    <h1>{{header}}</h1>
+    <div class="row mt-4 mb-5">
+        {{#each sortBlock}}
+        <div class="col-3">
+            <select class="form-select">
+                <option selected>{{placeholder}}</option>
+                {{#each options}}
+                <option value="{{value}}">{{text}}</option>
+                {{/each}}
+            </select>
+        </div>
+        {{/each}}
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <div class="card">
+                <div class="card-body">
+                    {{#with filterBlock}}
+                    <div class="card-title">{{sellers.title}}</div>
+                    {{#each sellers.list}}
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox">
+                        <label class="form-check-label">{{value}}</label>
+                    </div>
+                    {{/each}}
+                    <hr>
+                    <div class="card-title">{{brands.title}}</div>
+                    <input class="form-control mb-3" placeholder="{{brands.input.placeholder}}">
+                    {{#each brands.options}}
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox">
+                        <label class="form-check-label">{{value}}</label>
+                    </div>
+                    {{/each}}
+                    <hr>
+                    <div class="card-title">{{price.title}}</div>
+                    <input class="form-control mb-3" placeholder="{{price.range.from}}">
+                    <input class="form-control mb-3" placeholder="{{price.range.to}}">
+                    <div>
+                        <a href="{{price.button.link}}" class="btn btn-outline-secondary">
+                            {{price.button.text}}
+                        </a>
+                    </div>
+                    <hr>
+                    {{#each filterList}}
+                    <div class="card-title">{{title}}</div>
+                    <div class="form-check">
+                        {{#each options}}
+                        <input class="form-check-input" type="checkbox">
+                        <div><label class="form-check-label">{{value}}</label></div>
+                        {{/each}}
+                    </div>
+                    {{#unless @last}}
+                    <hr>
+                    {{/unless}}
+                    {{/each}}
+                    {{/with}}
+                </div>
+            </div>
+        </div>
+        <div class="col-8">
+            <div class="row">
+                {{#each goodsList}}
+                <div class="col-6 mb-4">
+                    {{> catalogItem}}
+                </div>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+
+    <div class="card text-bg-success text-center mt-5">
+        <div class="card-body">
+            <h2>{{service.title}}</h2>
+            <p>{{service.description}}</p>
+            <div>
+                <a href="{{service.buttons.0.link}}" class="btn btn-primary">{{service.buttons.0.text}}</a>
+            </div>
+        </div>
+    </div>
+    <hr class="mt-5">
+
+    {{> footer_shop}}
+</main>
