@@ -1,0 +1,86 @@
+<main>
+    {{> nav_shop disabl=true}}
+    {{#with formBlock}}
+    <div class="row mt-5">
+        <div class="col-8">
+            <h1>{{header}}</h1>
+            <div class="mt-3">{{rating.title}}: {{rating.value}}</div>
+            <div class="mt-5">
+                <ul class="nav nav-tabs">
+                    {{#each actionBlock.tabs}}
+                    <div class="col-4">
+                        <li class="nav-item text-center">
+                            <a class="nav-link {{#if isActive}}active{{/if}} text-centr" href="#">{{text}}</a>
+                        </li>
+                    </div>
+                    {{/each}}
+                </ul>
+            </div>
+            <hr class="mt-5 mb-5">
+            <div class="card">
+                <div class="card-body">
+                    <div class="mb-2">{{actionBlock.report.title}}</div>
+                    <a href="{{actionBlock.report.button.link}}"
+                        class="btn btn-secondary">{{actionBlock.report.button.text}}</a>
+                </div>
+            </div>
+            <hr class="mt-5 mb-5">
+            <h2 class="mb-5">{{feedbackBlock.title}}</h2>
+            <div>
+                {{#each feedbackBlock.buttons}}
+                <a href="{{link}}" class="btn 
+                    {{#if isWarning}}btn-warning{{/if}}
+                    {{#if isSuccess}}btn-success{{/if}}
+                    {{#if isDanger}}btn-danger{{/if}} me-2">
+                    {{text}}
+                </a>
+                {{/each}}
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="card">
+                <div class="card-body">
+                    <img src="{{goodsInfo.photo}}">
+                    <h6 class="card-title mt-3">{{goodsInfo.name}}</h6>
+                </div>
+            </div>
+            <div class="card mt-3">
+                <div class="card-body">
+                    <h6>{{goodsInfo.price}}</h6>
+                    {{#if goodsInfo.inMarket}}<div>Є в наявності</div>{{/if}}
+                    {{#each goodsInfo.buttons}}
+                    <div>
+                        <a href="{{link}}" class="btn
+                            {{#if isPrimary}}btn-primary{{/if}}
+                            {{#if isSecondary}}btn-secondary{{/if}} mt-2">
+                            {{text}}
+                        </a>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+            <div class="card mt-3">
+                <div class="card-body">
+                    {{goodsInfo.seller.title}}: <b>{{goodsInfo.seller.value}}</b>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{/with}}
+    <hr class="mt-5 mb-5">
+    {{#each reviewList}}
+    {{> shopreview}}
+    {{/each}}
+    <div class="card text-bg-success text-center">
+        <div class="card-body">
+            <h2>{{service.title}}</h2>
+            <p>{{service.description}}</p>
+            <div>
+                <a href="{{service.buttons.0.link}}" class="btn btn-primary">{{service.buttons.0.text}}</a>
+            </div>
+        </div>
+    </div>
+    <hr class="mt-5">
+
+    {{> footer_shop}}
+</main>
