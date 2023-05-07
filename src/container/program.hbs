@@ -3,95 +3,73 @@
 в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
 --}}
 
-<div>
-    <main>
-        {{#with program}}
-            {{#with excursion}}
-                <div>
-                    <h1>Excursion {{name}}</h1>
-                </div>
-                {{#with location}}
-                    <div>
-                        <address>{{city}}, {{country}}</address>
-                        <br>
-                        <time>({{../date}})</time>
-                    </div>
-                {{/with}}
-                <hr>
-                    <div>
-                        <ul>
-                            {{#with program.[0]}}
-                                <li><h2>{{name}}</h2></li>
-                                <div>type: {{type}}</div>
-                                <div>duration: ({{duration}} hours)</div>
-                                {{#with details}}
-                                    {{#with museum}}
-                                        <h3>{{name}}</h3>
-                                        {{#with location}}
-                                            <address>
-                                                {{address}}, {{city}}, {{country}}
-                                            </address>
-                                        {{/with}}
-                                        <br>
-                                        <ul>
-                                            {{#each exhibits}}
-                                                <li><b>{{name}}</b></li>
-                                                {{#unless artist}}
-                                                    artist: unknown
-                                                {{else}}
-                                                    <div>artist: {{artist}}</div>
-                                                {{/unless}}
-                                                <div>{{description}}</div>
-                                                {{#if audio_guide}}
-                                                    {{#with ../../guide}}
-                                                        <div>guide: {{name}}</div>
-                                                        <div>language: {{language}}</div>
-                                                        <div>rating: ({{rating}})</div>
-                                                    {{/with}}
-                                                {{/if}}
-                                                <br>
-                                            {{/each}}
-                                        </ul>
-                                    {{/with}}
-                                {{/with}}
-                            {{/with}}
-
-                            {{#with program.[1]}}
-                                <li><h2>{{name}}</h2></li>
-                                <div>type: {{type}}</div>
-                                <div>duration: ({{duration}} hours)</div>
-                                {{#with details}}
-                                    {{#with venue}}
-                                        <h3>{{name}}</h3>
-                                        {{#with location}}
-                                            <address>
-                                                {{address}}, {{city}}, {{country}}
-                                            </address>
-                                        {{/with}}
-                                        <br>
-                                    {{/with}}
-                                    <ul>
-                                        {{#each performers}}
-                                            <li><b>{{name}}</b></li>
-                                                <div>{{type}}</div>
-                                            {{#if ../guide}}
-                                                {{#with ../guide}}
-                                                    <div>guide: {{name}}</div>
-                                                    <div>language: {{language}}</div>
-                                                    <div>rating: ({{rating}})</div>
-                                                {{/with}}
-                                            {{/if}}
-                                            <br>
-                                        {{/each}}
-                                    </ul>
-                                {{/with}}
-                            {{/with}}
-                        </ul>
-                    </div>
+<main>
+    {{#with program}}
+    {{#with excursion}}
+    <div>
+        <h1>Excursion {{name}}</h1>
+    </div>
+    {{#with location}}
+    <div>
+        <address>{{city}}, {{country}}</address>
+        <time>({{../date}})</time>
+    </div>
+    {{/with}}
+    <hr>
+    <div class="row">
+        {{#each program}}
+        <div class="col-6 mt-4">
+            <h2>{{name}}</h2>
+            <div>type: {{type}}</div>
+            <div>duration: ({{duration}} hours)</div>
+            {{#with details}}
+            {{#if museum}}
+            {{#with museum}}
+            <h3 class="mt-4">{{name}}</h3>
+            {{#with location}}
+            <address>
+                {{address}}, {{city}}, {{country}}
+            </address>
             {{/with}}
-        {{/with}}
-    </main>
-</div>
+            <ul class="mt-4">
+                {{#each exhibits}}
+                <li class="mt-3"><b>{{name}}</b></li>
+                {{#unless artist}}
+                artist: unknown
+                {{else}}
+                <div>artist: {{artist}}</div>
+                {{/unless}}
+                <div>{{description}}</div>
+                {{/each}}
+            </ul>
+            {{/with}}
+            {{/if}}
+            {{#with venue}}
+            <h3 class="mt-4">{{name}}</h3>
+            {{#with location}}
+            <address>
+                {{address}}, {{city}}, {{country}}
+            </address>
+            {{/with}}
+            {{/with}}
+            <ul class="mt-4">
+                {{#each performers}}
+                <li><b>{{name}}</b></li>
+                <div class="mb-3">{{type}}</div>
+                {{/each}}
+                {{#with guide}}
+                <div class="mt-4">guide: {{name}}</div>
+                <div>language: {{language}}</div>
+                <div class="mb-4">rating: ({{rating}})</div>
+                {{/with}}
+            </ul>
+            {{/with}}
+        </div>
+        {{/each}}
+    </div>
+    {{/with}}
+    {{/with}}
+</main>
 
 {{!--
 Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs

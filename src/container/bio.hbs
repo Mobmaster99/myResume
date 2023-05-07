@@ -12,116 +12,128 @@
             <div>
                 <b>{{nationality}} {{occupation}}</b>
             </div>
-            <br>
-            <div>
+            <div class="mt-4">
                 <time>({{birthdate}} - {{deathdate}})</time>
             </div>
-            <br>
-            <div>
+            <div class="mt-4">
                 <address>{{birthplace}}</address>
             </div>
             <hr>
         </div>
 
-        <p>
-            <h2>Education:</h2>
-            {{#each education}}
-            <div>{{degree}}</div>
-            <div>{{field}}</div>
-            <div>{{institution}}</div>
-            <div>({{year}})</div>
-            {{/each}}
-        </p>
-
-        <p>
-            <h2>Known for:</h2>
-            <ul>
-                {{#each known_for}}
-                <li>
-                    <div>{{this}}</div>
-                </li>
+        <div class="row mt-5">
+            <div class="col-3">
+                <p>
+                <h2>Education:</h2>
+                {{#each education}}
+                <div>{{degree}}</div>
+                <div>{{field}}</div>
+                <div>{{institution}}</div>
+                <div>({{year}})</div>
                 {{/each}}
-            </ul>
-        </p>
-
-        <p>
-            <h2>Notable publications:</h2>
-            {{#each notable_publications}}
-            <div>{{title}}</div>
-            <div>{{publisher}} ({{year}})</div>
-            <br>
-            {{/each}}
-        </p>
-
-        <p>
-            <h2>Partners:</h2>
-            {{#each partners}}
-            <div><b>{{name}}</b></div>
-            <div>{{relationship}}</div>
-            <div>({{years}})</div>
-            <br>
-            {{/each}}
-        </p>
-
-        <p>
-            <h2>Awards:</h2>
-            {{#each awards}}
-            <div><b>{{title}}</b> ({{year}})</div>
-            <div>{{description}}</div>
-            <br>
-            {{/each}}
-        </p>
-
-        <p>
-            <h2>Influences:</h2>
-            <ul>
-                {{#each influences}}
-                <li>
-                    <div>{{this}}</div>
-                </li>
+                </p>
+            </div>
+            <div class="col-3">
+                <p>
+                <h2>Known for:</h2>
+                <ul>
+                    {{#each known_for}}
+                    <li>
+                        <div>{{this}}</div>
+                    </li>
+                    {{/each}}
+                </ul>
+                </p>
+            </div>
+            <div class="col-3">
+                <p>
+                <h2>Notable publications:</h2>
+                {{#each notable_publications}}
+                <div>{{title}}</div>
+                <div class="mb-4">{{publisher}} ({{year}})</div>
                 {{/each}}
-            </ul>
-        </p>
-
-        <p>
-            <h2>Influenced:</h2>
-            <ul>
-                {{#each influenced}}
-                <li>
-                    <div>{{this}}</div>
-                </li>
+                </p>
+            </div>
+            <div class="col-3">
+                <p>
+                <h2>Partners:</h2>
+                {{#each partners}}
+                <div><b>{{name}}</b></div>
+                <div>{{relationship}}</div>
+                <div class="mb-4">({{years}})</div>
                 {{/each}}
-            </ul>
-        </p>
+                </p>
+            </div>
+        </div>
 
-        <p>
-            <h2>Quotes:</h2>
-            <ul>
-                {{#each quotes}}
-                <li>
-                    <div><q>{{this}}</q></div>
-                </li>
+        <div class="row mt-5">
+            <div class="col-3">
+                <p>
+                <h2>Awards:</h2>
+                {{#each awards}}
+                <div><b>{{title}}</b> ({{year}})</div>
+                <div class="mb-4">{{description}}</div>
                 {{/each}}
-            </ul>
-        </p>
+                </p>
+            </div>
+            <div class="col-3">
+                <p>
+                <h2>Influences:</h2>
+                <ul>
+                    {{#each influences}}
+                    <li>
+                        <div>{{this}}</div>
+                    </li>
+                    {{/each}}
+                </ul>
+                </p>
+            </div>
+            <div class="col-3">
+                <p>
+                <h2>Influenced:</h2>
+                <ul>
+                    {{#each influenced}}
+                    <li>
+                        <div>{{this}}</div>
+                    </li>
+                    {{/each}}
+                </ul>
+                </p>
+            </div>
+            <div class="col-3">
+                <p>
+                <h2>Quotes:</h2>
+                <ul>
+                    {{#each quotes}}
+                    <li>
+                        <div><q>{{this}}</q></div>
+                    </li>
+                    {{/each}}
+                </ul>
+                </p>
+            </div>
+        </div>
 
-        <p>
-            <h2>Major Discoveries:</h2>
-            {{#each major_discoveries}}
-            <div><b>{{title}}</b> ({{year}})</div>
-            <div>{{description}}</div>
-            <br>
-            {{/each}}
-        </p>
-
-        <p>
-            <h2>Contributions:</h2>
-            {{#with contributions}}
-            <div><b>{{title}}</b> ({{year}})</div>
-            <div>{{description}}</div>
-            <br>
-            {{/with}}
-        </p>
+        <div class="row mt-5">
+            <div class="col-3">
+                <p>
+                <h2>Major Discoveries:</h2>
+                {{#each major_discoveries}}
+                <div><b>{{title}}</b> ({{year}})</div>
+                <div class="mb-4">{{description}}</div>
+                {{/each}}
+                </p>
+            </div>
+            <div class="col-3">
+                <p>
+                <h2>Contributions:</h2>
+                {{#with contributions}}
+                <div><b>{{title}}</b> ({{year}})</div>
+                <div class="mb-3">{{description}}</div>
+                {{/with}}
+                </p>
+            </div>
+        </div>
     </main>
 </div>
 

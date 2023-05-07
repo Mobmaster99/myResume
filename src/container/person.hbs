@@ -9,8 +9,7 @@
         <div>
             <h1>{{name}}</h1>
             <div>вік: ({{age}})</div>
-            <div>стать: {{gender}}</div>
-            <br>
+            <div class="mb-4">стать: {{gender}}</div>
             <address>
                 {{#with address}}
                 {{street}} {{city}} {{state}} {{zip}} {{country}}
@@ -26,8 +25,7 @@
             <div>{{university}} ({{graduationYear}})</div>
             {{/each}}
         </p>
-        <br>
-        <p>
+        <p class="mb-4">
             <h2>Work experience</h2>
             {{#each workExperience}}
                 <div>{{company}} ({{year_founded}}) {{industry}}</div>
@@ -36,7 +34,7 @@
                     <time>({{startDate}} - {{endDate}})</time>
                 </div>
                 <div>{{responsibilities}}</div>
-                <h3>Employees</h3>
+                <h3 class="mt-4">Employees</h3>
                 <ul>
                     {{#each employees}}
                         <li>
@@ -44,7 +42,7 @@
                         </li>
                         <div>{{position}}</div>
                         <div>{{department}}</div>
-                        <div><h4>Projects</h4></div>
+                        <h4 class="mt-4 mb-4">Projects</h4>
                         <ul>
                             {{#each projects}}
                                 <li>
@@ -52,7 +50,7 @@
                                 </li>
                                 <div>{{description}}</div>
                                 <div>{{status}}</div>
-                                <h5>Teams</h5>
+                                <h5 class="mt-4">Teams</h5>
                                 <ul>
                                     {{#each teams}}
                                         <li>
@@ -63,7 +61,7 @@
                                                 <div>{{title}}</div>
                                                 {{> link text=email href=email blank=true noLine=true }}
                                             {{/with}}
-                                            <h6>Team members</h6>
+                                            <h6 class="mt-4">Team members</h6>
                                             <ul>
                                                 {{#each team_members}}
                                                     <li>
@@ -72,22 +70,22 @@
                                                     <div>{{title}}</div>
                                                     {{> link text=email href=email blank=true noLine=true }}
                                                     <ul>
-                                                        <div>
+                                                        <div class="mt-3">
                                                             {{#each skills}}
                                                                 <li>
                                                                     <div>{{this}}</div>
                                                                 </li>
                                                             {{/each}}
-                                                            <br>
+                                                            
                                                             {{#each projects}}
-                                                                <div><b>{{name}}</b></div>
+                                                                <div class="mt-3"><b>{{name}}</b></div>
                                                                 <div>{{description}}</div>
                                                                 <ul>
                                                                     <div>
                                                                         {{#each technologies}}
                                                                             <li>{{this}}</li>
                                                                         {{/each}}
-                                                                        <div><h6>Team members</h6></div>
+                                                                        <h6 class="mt-3">Team members</h6>
                                                                         <ul>
                                                                             <div>
                                                                                 {{#each team_members}}
