@@ -7,71 +7,72 @@
     <main>
         <h1>{{name}} <span class="badge bg-primary">F</span></h1>
         <hr>
-        {{#each users}}
-        <h3>{{> userFB id=id name=name gender=gender age=age}}</h3>
-        <br>
-        <h2><span class="badge text-bg-warning">Friends:</span></h2>
-        <ul>
-            {{#each friends}}
-            <li>{{> userFB id=id name=name gender=gender age=age}}</li>
-            <h4><span class="badge text-bg-info">Mutal friends:</span></h4>
-            <ul>
-                {{#each mutual_friends}}
-                <li>{{> userFB id=id name=name gender=gender age=age}}</li>
-                {{#if mutual_friends}}
-                <h5><span class="badge text-bg-Secondary">Mutal friends:</span></h5>
+        <div class="row">
+            {{#each users}}
+            <div class="col-6">
+                <h3>{{> userFB id=id name=name gender=gender age=age}}</h3>
+                
+                <h2 class="mt-5"><span class="badge text-bg-warning">Friends:</span></h2>
                 <ul>
-                    {{#each mutual_friends}}
+                    {{#each friends}}
                     <li>{{> userFB id=id name=name gender=gender age=age}}</li>
+                    <h4><span class="badge text-bg-info">Mutal friends:</span></h4>
+                    <ul class="mb-4">
+                        {{#each mutual_friends}}
+                        <li>{{> userFB id=id name=name gender=gender age=age}}</li>
+                        {{#if mutual_friends}}
+                        <h5><span class="badge text-bg-Secondary">Mutal friends:</span></h5>
+                        <ul>
+                            {{#each mutual_friends}}
+                            <li>{{> userFB id=id name=name gender=gender age=age}}</li>
+                            {{/each}}
+                        </ul>
+                        {{/if}}
+                        {{/each}}
+                    </ul>
+                    {{#if groups}}
+                    <h4><span class="badge text-bg-info">Groups:</span></h4>
+                    <ul>
+                        {{#each groups}}
+                        <li>id: {{id}}</li>
+                        <li>name: {{name}}</li>
+                        <li>{{description}}</li>
+                        <li>
+                            <h5><span class="badge text-bg-Secondary">Members:</span></h5>
+                            <ul>
+                                {{#each members}}
+                                <li>{{> userFB id=id name=name gender=gender age=age}}</li>
+                                {{/each}}
+                            </ul>
+                        </li>
+                        {{/each}}
+                    </ul>
+                    {{/if}}
+                    {{/each}}
+                </ul>
+                {{#if groups}}
+                <h2><span class="badge text-bg-warning">Groups:</span></h2>
+                <ul>
+                    {{#each groups}}
+                    <li>id: {{id}}</li>
+                    <li>name: {{name}}</li>
+                    <li>{{description}}</li>
+                    <li>
+                        <h4><span class="badge text-bg-info">Members:</span></h4>
+                        <ul>
+                            {{#each members}}
+                            <li>{{> userFB id=id name=name gender=gender age=age}}</li>
+                            {{/each}}
+                        </ul>
+                    </li>
+                    <br>
                     {{/each}}
                 </ul>
                 {{/if}}
-                {{/each}}
-            </ul>
-            <br>
-            {{#if groups}}
-            <h4><span class="badge text-bg-info">Groups:</span></h4>
-            <ul>
-                {{#each groups}}
-                <li>id: {{id}}</li>
-                <li>name: {{name}}</li>
-                <li>{{description}}</li>
-                <li>
-                    <h5><span class="badge text-bg-Secondary">Members:</span></h5>
-                    <ul>
-                        {{#each members}}
-                        <li>{{> userFB id=id name=name gender=gender age=age}}</li>
-                        {{/each}}
-                    </ul>
-                </li>
-                <br>
-                {{/each}}
-            </ul>
-            <br>
-            {{/if}}
+            </div>
             {{/each}}
-        </ul>
-        {{#if groups}}
-        <h2><span class="badge text-bg-warning">Groups:</span></h2>
-        <ul>
-            {{#each groups}}
-            <li>id: {{id}}</li>
-            <li>name: {{name}}</li>
-            <li>{{description}}</li>
-            <li>
-                <h4><span class="badge text-bg-info">Members:</span></h4>
-                <ul>
-                    {{#each members}}
-                    <li>{{> userFB id=id name=name gender=gender age=age}}</li>
-                    {{/each}}
-                </ul>
-            </li>
-            <br>
-            {{/each}}
-        </ul>
-        {{/if}}
-        <hr>
-        {{/each}}
+            <hr>
+        </div>
     </main>
 </div>
 

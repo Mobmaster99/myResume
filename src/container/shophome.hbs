@@ -1,16 +1,5 @@
 <main>
-    <div class="card mt-5">
-        <div class="nav">
-            {{#each navigation.links}}
-            <div class="nav-item">
-                <a href="{{href}}" class="nav-link">{{text}}</a>
-            </div>
-            {{/each}}
-            <div class="nav-item">
-                <a href="#" class="nav-link disabled">Disabled</a>
-            </div>
-        </div>
-    </div>
+    {{> nav_shop disabl=true}}
     <div class="mt-5">
         <h1 class="text-center">{{newsBlock.title}}</h1>
     </div>
@@ -102,38 +91,5 @@
         {{/each}}
     </div>
     <hr class="mt-5 mb-5">
-    <div class="row">
-        {{#each footer}}
-        <div class="col-2">
-            {{#with [0]}}
-            <div class="nav">
-                <div class="nav-item">
-                    <a href="{{link}}" class="nav-link">{{text}}</a>
-                </div>
-            </div>
-            {{/with}}
-            {{#with [1]}}
-            <div class="nav">
-                <div class="nav-item">
-                    <a href="{{link}}" class="nav-link">{{text}}</a>
-                </div>
-            </div>
-            {{/with}}
-            {{#with [2]}}
-            <div class="nav">
-                <div class="nav-item">
-                    <a href="{{link}}" class="nav-link">{{text}}</a>
-                </div>
-            </div>
-            {{/with}}
-            {{#with [3]}}
-            <div class="nav">
-                <div class="nav-item">
-                    <a href="{{link}}" class="nav-link disabled">{{text}}</a>
-                </div>
-            </div>
-            {{/with}}
-        </div>
-        {{/each}}
-    </div>
+    {{> footer_shop}}
 </main>

@@ -14,9 +14,7 @@
     <p>{{header.description}}</p>
     <a href="{{header.button.link}}" class="btn btn-primary col-2">{{header.button.text}}</a>
     </p>
-    <br>
-    <hr>
-    <br>
+    <hr class="mt-5 mb-5">
     <h2>{{city.title}}</h2>
     <section class="row">
         {{#each city.cards}}
@@ -36,7 +34,6 @@
     <section>
         {{#with winner}}
         <h2>{{title}}</h2>
-        <br>
         <table class="table">
             <thead>
                 <tr>
@@ -62,9 +59,7 @@
     <hr>
 
     {{#with gallery}}
-    <br>
-    <h2>{{title}}</h2>
-    <br>
+    <h2 class="mt-4 mb-4">{{title}}</h2>
     <div class="row g-2">
         {{#each cards}}
         <section class="col-4">
@@ -85,9 +80,7 @@
     <hr>
 
     {{#with relaxion}}
-    <br>
-    <div class="display-3">{{title}}</div>
-    <br>
+    <div class="display-3 mt-4 mb-4">{{title}}</div>
     <div class="row g-2">
         {{#each cards}}
         <section class="col-5">
@@ -108,8 +101,7 @@
     <hr>
 
     {{#with rest}}
-    <br>
-    <div class="row g-2">
+    <div class="row g-2 mt-5">
         {{#each cards}}
         <section class="col-6">
             <div class="card text-center">
@@ -132,9 +124,7 @@
     <hr>
 
     {{#with proposition}}
-    <br>
-    <div class="display-2">{{title}}</div>
-    <br>
+    <div class="display-2 mt-4 mb-4">{{title}}</div>
     <div class="row g-2">
         {{#each card}}
         <section class="col-5">
@@ -155,9 +145,7 @@
     <hr>
 
     {{#with footer}}
-    <br>
-    <h5>{{title}}</h5>
-    <br>
+    <h5 class="mt-4 mb-4">{{title}}</h5>
     
     <div class="row">
         <div class="col-3">

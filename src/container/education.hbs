@@ -5,8 +5,8 @@
 
 <div>
     {{#with main}}
-    <main>
-        <section>
+    <main class="row">
+        <section class="col-6">
             {{> title data="My education" big=true}}
             <ul>
                 {{#each education}}
@@ -18,7 +18,7 @@
             </ul>
         </section>
 
-        <section>
+        <section class="col-6">
             {{> title data="My certificates"}}
             <ul>
                 {{#each certificates}}

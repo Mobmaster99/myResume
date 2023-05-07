@@ -1,15 +1,56 @@
-{{!-- 
-Це код container файлу для index сторінки, 
+{{!--
+Це код container файлу для index сторінки,
 в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/"
- --}}
-
-<div class="p-5">
-    <h1>USB хаб Type C 12 в 1 HDMI VGA AUX 3.5 mm</h1>
-
-    <button type="button" class="btn btn-primary">Купити</button>
-</div>
-
-{{!-- 
-    Цей код містить лише те, що буде виводитись в <body>
-    Адже наш layout/default.hbs має вже структуру HTML
 --}}
+
+<main>
+    <h1 class="mt-5">Список сторінок</h1>
+    <div>Це мій перший Pet Project</div>
+    <div class="card mt-5 text-bg-secondary">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-2 container text-center">
+                    <a href="/summary" class="btn-1"><span>Summary</span></a>
+                    <a href="/program" class="btn-1"><span>Program</span></a>
+                    <a href="/task21" class="btn-1"><span>Task21</span></a>
+                    <a href="/bootstrap" class="btn-1"><span>Bootstrap</span></a>
+                </div>
+                <div class="col-2 container text-center">
+                    <a href="/skills" class="btn-1"><span>Skills</span></a>
+                    <a href="/web" class="btn-1"><span>Web</span></a>
+                    <a href="/task22" class="btn-1"><span>Task22</span></a>
+                    <a href="/shopprofile" class="btn-1"><span>Shopprofile</span></a>
+                </div>
+                <div class="col-2 container text-center">
+                    <a href="/education" class="btn-1"><span>Education</span></a>
+                    <a href="/js" class="btn-1"><span>Js</span></a>
+                    <a href="/task31" class="btn-1"><span>Task31</span></a>
+                    <a href="/shopreview" class="btn-1"><span>Shopreview</span></a>
+                </div>
+                <div class="col-2 container text-center">
+                    <a href="/work" class="btn-1"><span>Work</span></a>
+                    <a href="/car" class="btn-1"><span>Car</span></a>
+                    <a href="/shophome" class="btn-1"><span>Shophome</span></a>
+                    <a href="/shopcatalog" class="btn-1"><span>Shopcatalog</span></a>
+                </div>
+                <div class="col-2 container text-center">
+                    <a href="/person" class="btn-1"><span>Person</span></a>
+                    <a href="/mac" class="btn-1"><span>Mac</span></a>
+                    <a href="/shoporder" class="btn-1"><span>Shoporder</span></a>
+                </div>
+                <div class="col-2 container text-center">
+                    <a href="/bio" class="btn-1"><span>Bio</span></a>
+                    <a href="/facebook" class="btn-1"><span>Facebook</span></a>
+                    <a href="/shopcart" class="btn-1"><span>Shopcart</span></a>
+                </div> 
+            </div>
+        </div>
+    </div>
+</main>
+
+{{!--
+Цей код містить лише те, що буде виводитись в
+
+<body>
+    Адже наш layout/default.hbs має вже структуру HTML
+    --}}

@@ -5,131 +5,139 @@
 
 <div>
     <main>
-        <div>
-            <ul class="list-group">
-                <li class="list-group-item active" aria-current="true">
-                    <h1>{{name}}</h1>
-                </li>
-                <li class="list-group-item list-group-item-warning"><b>{{description}}</b></li>
-                <li class="list-group-item list-group-item-success">
-                    <h4>Price: {{price}}$</h4>
-                </li>
-            </ul>
-        </div>
-        <br>
-        <div>
-            {{#with features}}
-            <ul class="list-group">
-                <li class="list-group-item active"><h3>Features:</h3></li>
-                <li class="list-group-item list-group-item-primary">
-                    <h4>Processor:</h4>
-                    <ul>
-                        {{#with processor}}
-                        <li>brand: {{brand}}</li>
-                        <li>model: {{model}}</li>
-                        <li>speed: {{speed}}</li>
-                        <li>cores: {{cores}}</li>
-                        <li>cache: {{cache}}</li>
-                        {{/with}}
-                    </ul>
-                </li>
-                <li class="list-group-item list-group-item-primary">
-                    <h4>Memory:</h4>
-                    <ul>
-                        {{#with memory}}
-                        <li>type: {{type}}</li>
-                        <li>size: {{size}}</li>
-                        <li>speed: {{speed}}</li>
-                        {{/with}}
-                    </ul>
-                </li>
-                <li class="list-group-item list-group-item-primary">
-                    <h4>Storage:</h4>
-                    <ul>
-                        {{#with storage}}
-                        <li>type: {{type}}</li>
-                        <li>size: {{size}}</li>
-                        {{/with}}
-                    </ul>
-                </li>
-                <li class="list-group-item list-group-item-primary">
-                    <h4>Display:</h4>
-                    <ul>
-                        {{#with display}}
-                        <li>size: {{size}}</li>
-                        <li>resolution: {{resolution}}</li>
-                        <li>technology: {{technology}}</li>
-                        <li>color_space: {{color_space}}</li>
-                        <li>brightness: {{brightness}}</li>
-                        <li>refresh_rate: {{refresh_rate}}</li>
-                        {{/with}}
-                    </ul>
-                </li>
-                <li class="list-group-item list-group-item-primary">
-                    <h4>Graphics:</h4>
-                    <ul>
-                        {{#with graphics}}
-                        <li>brand: {{brand}}</li>
-                        <li>model: {{model}}</li>
-                        <li>memory: {{memory}}</li>
-                        {{/with}}
-                    </ul>
-                </li>
-                <li class="list-group-item list-group-item-primary">
-                    <h4>Ports:</h4>
-                    <ul>
-                        {{#each ports}}
-                        <li>type: {{type}}</li>
-                        <li>count: {{count}}</li>
+        <div class="row">
+            <div class="col-12">
+                <ul class="list-group">
+                    <li class="list-group-item active" aria-current="true">
+                        <h1>{{name}}</h1>
+                    </li>
+                    <li class="list-group-item list-group-item-warning"><b>{{description}}</b></li>
+                    <li class="list-group-item list-group-item-success">
+                        <h4>Price: {{price}}$</h4>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-6 mt-4">
+                {{#with features}}
+                <ul class="list-group">
+                    <li class="list-group-item active">
+                        <h3>Features:</h3>
+                    </li>
+                    <li class="list-group-item list-group-item-primary">
+                        <h4>Processor:</h4>
+                        <ul>
+                            {{#with processor}}
+                            <li>brand: {{brand}}</li>
+                            <li>model: {{model}}</li>
+                            <li>speed: {{speed}}</li>
+                            <li>cores: {{cores}}</li>
+                            <li>cache: {{cache}}</li>
+                            {{/with}}
+                        </ul>
+                    </li>
+                    <li class="list-group-item list-group-item-primary">
+                        <h4>Memory:</h4>
+                        <ul>
+                            {{#with memory}}
+                            <li>type: {{type}}</li>
+                            <li>size: {{size}}</li>
+                            <li>speed: {{speed}}</li>
+                            {{/with}}
+                        </ul>
+                    </li>
+                    <li class="list-group-item list-group-item-primary">
+                        <h4>Storage:</h4>
+                        <ul>
+                            {{#with storage}}
+                            <li>type: {{type}}</li>
+                            <li>size: {{size}}</li>
+                            {{/with}}
+                        </ul>
+                    </li>
+                    <li class="list-group-item list-group-item-primary">
+                        <h4>Display:</h4>
+                        <ul>
+                            {{#with display}}
+                            <li>size: {{size}}</li>
+                            <li>resolution: {{resolution}}</li>
+                            <li>technology: {{technology}}</li>
+                            <li>color_space: {{color_space}}</li>
+                            <li>brightness: {{brightness}}</li>
+                            <li>refresh_rate: {{refresh_rate}}</li>
+                            {{/with}}
+                        </ul>
+                    </li>
+                    <li class="list-group-item list-group-item-primary">
+                        <h4>Graphics:</h4>
+                        <ul>
+                            {{#with graphics}}
+                            <li>brand: {{brand}}</li>
+                            <li>model: {{model}}</li>
+                            <li>memory: {{memory}}</li>
+                            {{/with}}
+                        </ul>
+                    </li>
+                    <li class="list-group-item list-group-item-primary">
+                        <h4>Ports:</h4>
+                        <ul>
+                            {{#each ports}}
+                            <li>type: {{type}}</li>
+                            <li>count: {{count}}</li>
                             <ul>
                                 {{#each features}}
-                                <li>{{this}}</li> 
+                                <li>{{this}}</li>
                                 {{/each}}
                             </ul>
-                        {{/each}}
-                    </ul>
-                </li>
-                <li class="list-group-item list-group-item-primary">
-                    <h4>Battery:</h4>
-                    <ul>
-                        {{#with battery}}
-                        <li>type: {{type}}</li>
-                        <li>capacity: {{capacity}}</li>
-                        <li>life: {{life}}</li>
-                        {{/with}}
-                    </ul>
-                </li>
-                <li class="list-group-item list-group-item-primary">
-                    <h4>Weight:</h4>
-                    <ul>
-                        <li>{{weight}}</li>
-                    </ul>
-                </li>
-                <li class="list-group-item list-group-item-primary">
-                    <h4>Dimensions:</h4>
-                    <ul>
-                        {{#with dimensions}}
-                        <li>height: {{height}}</li>
-                        <li>width: {{width}}</li>
-                        <li>depth: {{depth}}</li>
-                        {{/with}}
-                    </ul>
-                </li>
-                <li class="list-group-item list-group-item-primary">
-                    <h4>Operating system:</h4>
-                    <ul>
-                        <li>{{operating_system}}</li>
-                    </ul>
-                </li>
-            </ul>    
-            <br>
-            <ul class="list-group">
-                <li class="list-group-item active"><h3>Accessories:</h3></li>
-                {{#each accessories}}
-                <li class="list-group-item list-group-item-success"><b>{{name}}:</b> <h4>{{price}}$</h4></li>
-                {{/each}}
-            </ul>
-            {{/with}}
+                            {{/each}}
+                        </ul>
+                    </li>
+                    <li class="list-group-item list-group-item-primary">
+                        <h4>Battery:</h4>
+                        <ul>
+                            {{#with battery}}
+                            <li>type: {{type}}</li>
+                            <li>capacity: {{capacity}}</li>
+                            <li>life: {{life}}</li>
+                            {{/with}}
+                        </ul>
+                    </li>
+                    <li class="list-group-item list-group-item-primary">
+                        <h4>Weight:</h4>
+                        <ul>
+                            <li>{{weight}}</li>
+                        </ul>
+                    </li>
+                    <li class="list-group-item list-group-item-primary">
+                        <h4>Dimensions:</h4>
+                        <ul>
+                            {{#with dimensions}}
+                            <li>height: {{height}}</li>
+                            <li>width: {{width}}</li>
+                            <li>depth: {{depth}}</li>
+                            {{/with}}
+                        </ul>
+                    </li>
+                    <li class="list-group-item list-group-item-primary">
+                        <h4>Operating system:</h4>
+                        <ul>
+                            <li>{{operating_system}}</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-6">
+                <ul class="list-group mt-4">
+                    <li class="list-group-item active">
+                        <h3>Accessories:</h3>
+                    </li>
+                    {{#each accessories}}
+                    <li class="list-group-item list-group-item-success"><b>{{name}}:</b>
+                        <h4>{{price}}$</h4>
+                    </li>
+                    {{/each}}
+                </ul>
+                {{/with}}
+            </div>
         </div>
     </main>
 </div>

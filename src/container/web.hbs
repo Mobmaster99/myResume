@@ -6,74 +6,77 @@
 <div>
     <main>
         {{#with web}}
-            <h1>Languages</h1>
-            <hr>
-            <ul>
-                {{#each languages}}
-                    <h2>
-                        <li>{{name}} ({{version}})</li>
-                    </h2>
-                    <div>{{description}}</div>
-                    <br>
-                    {{#if elements}}
-                    <br>
-                    <div><h3>Elements:</h3></div>
-                    <dl>
-                        {{#each elements}}
+        <h1>Languages</h1>
+        <hr>
+        <div class="row">
+            {{#each languages}}
+            <div class="col-4 p-2">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>
+                            {{name}} ({{version}})
+                        </h2>
+                        <div class="mb-4">{{description}}</div>
+                    </div>
+                    <div class="card-body">
+                        {{#if elements}}
+                        <div class="mt-4">
+                            <h3>Elements:</h3>
+                        </div>
+                        <dl>
+                            {{#each elements}}
                             <dt><b>({{name}})</b></dt>
                             <dd>{{description}}</dd>
                             <dd>
                                 <dl>
                                     {{#each attributes}}
                                     <dt>atribute: <b>({{name}})</b></dt>
-                                    <dd>{{description}}</dd>
-                                    <br>
+                                    <dd class="mb-3">{{description}}</dd>
                                     {{/each}}
                                 </dl>
                             </dd>
-                        {{/each}}
-                    </dl>
-                    {{/if}}
-                    {{#if properties}}
-                    <br>
-                    <div><h3>Properties:</h3></div>
-                    <dl>
-                        {{#each properties}}
-                            <dt><b>({{name}})</b></dt>
+                            {{/each}}
+                        </dl>
+                        {{/if}}
+                        {{#if properties}}
+                        <h3 class="mt-4">Properties:</h3>
+                        <dl>
+                            {{#each properties}}
+                            <dt class="mt-4"><b>({{name}})</b></dt>
                             <dd>{{description}}</dd>
                             <dd>
                                 <dl>
                                     {{#each values}}
                                     <dt>value: <b>{{value}}</b></dt>
-                                    <dd>{{description}}</dd>
-                                    <br>
+                                    <dd class="mb-3">{{description}}</dd>
                                     {{/each}}
                                 </dl>
                             </dd>
-                        {{/each}}
-                    </dl>
-                    {{/if}}
-                    {{#if functions}}
-                    <br>
-                    <div><h3>Functions:</h3></div>
-                    <dl>
-                        {{#each functions}}
+                            {{/each}}
+                        </dl>
+                        {{/if}}
+                        {{#if functions}}
+                        <h3 class="mt-4">Functions:</h3>
+                        <dl>
+                            {{#each functions}}
                             <dt><b>{{name}}</b></dt>
                             <dd>{{description}}</dd>
                             <dd>
                                 <dl>
                                     {{#each parameters}}
                                     <dt>parameter: <b>{{name}}</b> ({{type}})</dt>
-                                    <dd>{{description}}</dd>
-                                    <br>
+                                    <dd class="mb-5">{{description}}</dd>
                                     {{/each}}
                                 </dl>
                             </dd>
-                        {{/each}}
-                    </dl>
-                    {{/if}}
-                {{/each}}
-            </ul>
+                            {{/each}}
+                        </dl>
+                        {{/if}}
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
         {{/with}}
     </main>
 </div>
